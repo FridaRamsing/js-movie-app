@@ -592,4 +592,41 @@ dialog#movie-dialog::backdrop {
   #close-dialog {
     background: rgba(23, 23, 23, 0.9);
   }
+
+  /* År filter styling */
+.year-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+.year-filter input {
+  width: 80px;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.year-filter input:focus {
+  outline: 2px solid var(--secondary);
+  border-color: var(--secondary);
+}
+
+// Number() konverterer string til tal
+Number("2020"); // → 2020 (heltal)
+Number("8.5"); // → 8.5 (decimal)
+Number(""); // → 0 (tom string = 0)
+Number("abc"); // → NaN (invalid tekst)
+
+// Default værdier med || operator
+Number("") || 0; // → 0
+Number("2020") || 0; // → 2020
+Number("abc") || 9999; // → 9999 (hvis teksten ikke er et tal)
+}
+
+
